@@ -267,24 +267,45 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    gg();
+});
+})();
 
-})()
 function JoinQQGroup(){
   window.open("https://jq.qq.com/?_wv=1027&k=2lpTM8KM");
   Swal.fire({"text":"已跳转链接",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
 }
+
 function OpenAfdian(){
-  window.open("https://afdian.net/a/litecat");
-  Swal.fire({"text":"已跳转链接",showCloseButton: false,
+  //window.open("https://afdian.net/a/litecat");
+  Swal.fire({"title":"<iframe src=\"https://afdian.net/a/litecat\" width=\"500\" height=\"650\" frameborder=\"0\"></iframe>",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
 }
+
 function OpenDoc(){
   window.open("https://thoughts.teambition.com/share/631abea5da92850041d26753#title=前言");
   Swal.fire({"text":"已跳转链接",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
 }
+
 function cimiaolitecat(){
   Swal.fire({"text":"偷偷告诉你 华喵、LiteCat、CiMiao 都是一个人",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
+}
+function gg(){
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 5000,
+  })
+  var d = new Date();
+  var n = d.getFullYear() +"/" +(d.getMonth()+1).toString()+"/"+d.getDate().toString();
+  Toast.fire({
+    type: "success",
+    title: n + '\n 今天没什么大事呢···'
+  })
 }
