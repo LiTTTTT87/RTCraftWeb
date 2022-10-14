@@ -280,7 +280,7 @@ function JoinQQGroup(){
 }
 
 function OpenAfdian(){
-  //window.open("https://afdian.net/a/litecat");
+  window.open("https://afdian.net/a/litecat");
   Swal.fire({"title":"<iframe src=\"https://afdian.net/a/litecat\" width=\"500\" height=\"650\" frameborder=\"0\"></iframe>",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
 }
