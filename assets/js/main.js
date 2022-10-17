@@ -299,13 +299,26 @@ function gg(){
   const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
-    showConfirmButton: false,
-    timer: 5000,
+    showConfirmButton: false
   })
   var d = new Date();
-  var n = d.getFullYear() +"/" +(d.getMonth()+1).toString()+"/"+d.getDate().toString();
+  var t = d.getFullYear() +"/" +(d.getMonth()+1).toString()+"/"+d.getDate().toString();
+  var ifmt = "今天没什么大事呢···";
+  var tr = 5000
+  if (t=="2022/10/17"){ //什么你问我为什么这么写？因为我懒得更新~
+    ifmt = "更换服务器图标~";
+  }
+  if (t=="2022/12/31"){
+    ifmt = "✨冒险家,今天是2022年的最后一天了，\n你是否也达成了你今天的最后一个成就了呢？♥";
+    tr = "100000"
+  }
+  if (t=="2023/1/1"){
+    ifmt = "🎆冒险家,欢迎你来到2023年！";
+    tr = "10000"
+  }
   Toast.fire({
     type: "success",
-    title: n + '\n 今天没什么大事呢···'
+    timer: tr,
+    title: t + '\n' + ifmt
   })
 }
