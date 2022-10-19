@@ -7,7 +7,7 @@
 (function() {
   "use strict";
   console.log("  ,------.,--------.,-----.    ,--.   ,--.      ,--. \n  |  .--. '--.  .--'  .--.\/    |  |   |  |,---. |  |-. \n  |  '--'.'  |  |  |  |        |  |.'.|  | .-. :| .-. ' \n  |  |\\  \\   |  |  '  '--'\\    |   ,'.   \\   --.| `-' | \n  `--' '--'  `--'   `-----'    '--'   '--'`----' `---' \n   ");
-                                              
+  console.log("当前WEB版本：1.0.7");                           
                                                         
   /**
    * Easy selector helper function
@@ -271,26 +271,22 @@
   document.addEventListener('DOMContentLoaded', function() {
     gg();
 });
-})();
-
+})()
 function JoinQQGroup(){
   window.open("https://jq.qq.com/?_wv=1027&k=2lpTM8KM");
   Swal.fire({"text":"已跳转链接",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
 }
-
 function OpenAfdian(){
   window.open("https://afdian.net/a/litecat");
-  Swal.fire({"title":"<iframe src=\"https://afdian.net/a/litecat\" width=\"500\" height=\"650\" frameborder=\"0\"></iframe>",showCloseButton: false,
+  Swal.fire({"text":"已跳转链接",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
 }
-
 function OpenDoc(){
   window.open("https://thoughts.teambition.com/share/631abea5da92850041d26753#title=前言");
   Swal.fire({"text":"已跳转链接",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
 }
-
 function cimiaolitecat(){
   Swal.fire({"text":"偷偷告诉你 华喵、LiteCat、CiMiao 都是一个人",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
@@ -303,10 +299,11 @@ function gg(){
   })
   var d = new Date();
   var t = d.getFullYear() +"/" +(d.getMonth()+1).toString()+"/"+d.getDate().toString();
+  //var t= "2022/10/20";
   var ifmt = "今天没什么大事呢···";
-  var tr = 5000
-  if (t=="2022/10/17"){ //什么你问我为什么这么写？因为我懒得更新~
-    ifmt = "更换服务器图标~";
+  var tr = 5000;
+  if (t=="2022/10/19" || t=="2022/10/20"){ //什么你问我为什么这么写？因为我懒得更新~
+    ifmt = "更换服务器图标~原来主要文字太小了~";
   }
   if (t=="2022/12/31"){
     ifmt = "✨冒险家,今天是2022年的最后一天了，\n你是否也达成了你今天的最后一个成就了呢？♥";
