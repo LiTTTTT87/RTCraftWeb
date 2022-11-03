@@ -1177,6 +1177,7 @@ section {
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
+  position: relative;
 }
 
 #footer h3 {
@@ -1222,9 +1223,15 @@ section {
 
 #footer .copyright {
   margin: 0 0 5px 0;
-  color: #B9B9C3
+  color: #B9B9C3;
+  position: unset;
 }
 
 #footer .credits {
   font-size: 13px;
 }
+.fly-fish{
+  z-index: -1;
+  line-height: 0px;
+  height: 350px;
+  }
