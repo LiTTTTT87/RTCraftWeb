@@ -291,19 +291,27 @@ function cimiaolitecat(){
   Swal.fire({"text":"偷偷告诉你 华喵、LiteCat、CiMiao 都是一个人",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
 }
+function gameip(){
+  Swal.fire({"text":"JAVA服务器地址：  \nJava版本 1.19.2  【mc.RTCRAFT.cn:22497】   \n基岩版 1.19.0/1.19.2+ \n服务器地址：  \n【bedrock.RTCRAFT.cn】  \n服务器端口：\n 【44639】",showCloseButton: false,
+  showCancelButton: false,showConfirmButton: false});
+}
 function gg(){
   const Toast = Swal.mixin({
     toast: true,
-    position: 'top-end',
+    position: 'top',
     showConfirmButton: false
   })
+  var tp;
   var d = new Date();
   var t = d.getFullYear() +"/" +(d.getMonth()+1).toString()+"/"+d.getDate().toString();
   //var t= "2022/10/20";
   var ifmt = "今天没什么大事呢···";
   var tr = 5000;
-  if (t=="2022/10/19" || t=="2022/10/20"){ //什么你问我为什么这么写？因为我懒得更新~
-    ifmt = "更换服务器图标~原来主要文字太小了~";
+  tp = "success"
+  if (t=="2022/11/13" || t=="2022/11/14" || t=="2022/11/15" || t=="2022/11/16" || t=="2022/11/17" || t=="2022/11/18"){ //什么你问我为什么这么写？因为我懒得更新~
+    ifmt = "Minimouse给我从新月踢了😈，我急了";
+    tr = 1000000;
+    tp = "error";
   }
   if (t=="2022/12/31"){
     ifmt = "✨冒险家,今天是2022年的最后一天了，\n你是否也达成了你今天的最后一个成就了呢？♥";
@@ -314,7 +322,7 @@ function gg(){
     tr = "10000"
   }
   Toast.fire({
-    type: "success",
+    type:  tp,
     timer: tr,
     title: t + '\n' + ifmt
   })
