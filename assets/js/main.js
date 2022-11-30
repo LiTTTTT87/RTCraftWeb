@@ -297,17 +297,22 @@ function gameip(){
 }
 function gg(){
   const Toast = Swal.mixin({
-    toast: true,
-    position: 'top',
     showConfirmButton: false
   })
+  //时间
   var tp;
   var d = new Date();
   var t = d.getFullYear() +"/" +(d.getMonth()+1).toString()+"/"+d.getDate().toString();
+  var month = d.getMonth()+1;
+  var day = d.getDate();
   //var t= "2022/10/20";
+  //公告初始化
   var ifmt = "今天没什么大事呢···";
   var tr = 5000;
+  pos = "top"
+  tos = true
   tp = "success"
+  //特殊日期公告
   if (t=="2022/11/24" || t=="2022/11/25" || t=="2022/11/26" || t=="2022/11/27" || t=="2022/11/28" || t=="2022/11/29"){ //什么你问我为什么这么写？因为我懒得更新~
     ifmt = '    ✊\n                                    唉呵！任何邪恶😠终将绳之以法！\n        👊    ';
     tr = 1000000;
@@ -321,9 +326,29 @@ function gg(){
     ifmt = "🎆冒险家,欢迎你来到2023年！";
     tr = "10000"
   }
+  if(month=='12' && day=='13'){
+    $("html").css({"filter":"progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)","-webkit-filter":"grayscale(100%)"});
+    ifmt = "昭昭前事，惕惕后人，铭记历史，吾辈奋进。此刻，南京！";
+    tr = "10000"
+    tp = "info";
+  }
+  if(month=='11' && day=='30' || month=='12' && day=='1'){
+    $("html").css({"filter":"progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)","-webkit-filter":"grayscale(100%)"});
+    ifmt = "为江泽民同志深切悼念";
+    tr = "100000"
+    tp = "";
+    pos = ""
+    tos = false
+}
+//启动公告
   Toast.fire({
     type:  tp,
     timer: tr,
-    title: t + '\n' + ifmt
+    title: t + '\n' + ifmt,
+    position: pos,
+    toast: tos,
   })
+  /*公祭日自动变黑白开始*/
+  
+/*公祭日自动变黑白结束*/
 }
