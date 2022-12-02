@@ -331,13 +331,13 @@ function gg(){
     tr = "10000"
     tp = "info";
   }
-  if(month=='12' && day=='1' || month=='12' && day=='2' || month=='12' && day=='3' || month=='12' && day=='4' || month=='12' && day=='5'){
+  if(month=='12' && day=='1' || month=='12' && day=='2' || month=='12' && day=='3' || month=='12' && day=='4' || month=='12' && day=='5' || month=='12' && day=='6'){
     $("html").css({"filter":"progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)","-webkit-filter":"grayscale(100%)"});
-    ifmt = "为江泽民同志深切悼念";
+    ifmt = "··········";
     tr = "100000"
-    tp = ""
-    pos = "center"
-    tos = false
+    tp = "info"
+    pos = "top"
+    tos = true
     showbtn = false
     btntext = "前往"
 }
