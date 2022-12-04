@@ -295,6 +295,9 @@ function gameip(){
   Swal.fire({"text":"JAVA服务器地址：  \nJava版本 1.19.2  【mc.RTCRAFT.cn:22497】   \n基岩版 1.19.0/1.19.2+ \n服务器地址：  \n【bedrock.RTCRAFT.cn】  \n服务器端口：\n 【44639】",showCloseButton: false,
   showCancelButton: false,showConfirmButton: false});
 }
+function OpenBook(){
+  window.open("https://www.bilibili.com/read/cv20147517");
+}
 function gg(){
   //时间
   var tp;
@@ -311,6 +314,7 @@ function gg(){
   tp = "success"
   showbtn = false
   btntext = "关闭"
+  titleYuan = t + '\n' + ifmt
   //特殊日期公告
   if (t=="2022/11/24" || t=="2022/11/25" || t=="2022/11/26" || t=="2022/11/27" || t=="2022/11/28" || t=="2022/11/29"){ //什么你问我为什么这么写？因为我懒得更新~
     ifmt = '    ✊\n                                    唉呵！任何邪恶😠终将绳之以法！\n        👊    ';
@@ -333,19 +337,20 @@ function gg(){
   }
   if(month=='12' && day=='1' || month=='12' && day=='2' || month=='12' && day=='3' || month=='12' && day=='4' || month=='12' && day=='5' || month=='12' && day=='6'){
     $("html").css({"filter":"progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)","-webkit-filter":"grayscale(100%)"});
-    ifmt = "··········";
+    ifmt = '<div class="link" onclick="OpenBook()"><h3>《告全党全军全国各族人民书》</h3></div>';
     tr = "100000"
     tp = "info"
     pos = "top"
     tos = true
     showbtn = false
     btntext = "前往"
+    titleYuan = ifmt
 }
 //启动公告
   Swal.fire({
     type:  tp,
     timer: tr,
-    title: t + '\n' + ifmt,
+    title: titleYuan,
     position: pos,
     toast: tos,
     showConfirmButton: showbtn,
