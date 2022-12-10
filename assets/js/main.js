@@ -298,6 +298,9 @@ function gameip(){
 function OpenBook(){
   window.open("https://www.bilibili.com/read/cv20147517");
 }
+function OpenWXMC(){
+  window.open("http://wxmc.top:8002/");
+}
 function gg(){
   //时间
   var tp;
@@ -337,7 +340,7 @@ function gg(){
   }
   if(month=='12' && day=='1' || month=='12' && day=='2' || month=='12' && day=='3' || month=='12' && day=='4' || month=='12' && day=='5' || month=='12' && day=='6'){
     $("html").css({"filter":"progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)","-webkit-filter":"grayscale(100%)"});
-    ifmt = '<div class="link" onclick="OpenBook()"><h3>《告全党全军全国各族人民书》</h3></div>';
+    ifmt = '···';
     tr = "100000"
     tp = "info"
     pos = "top"
@@ -357,3 +360,6 @@ function gg(){
     confirmButtonText: btntext,
   })
 }
+
+
+
